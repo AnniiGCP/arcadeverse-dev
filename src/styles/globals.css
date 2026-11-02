@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * ArcadeVerse Design System
+ * ------------------------------------------------------------
+ * A dark-first, premium developer-product system built on
+ * layered navy surfaces, a violet primary accent, a gold
+ * secondary highlight and a small supporting palette.
+ *
+ * All colors are stored as raw HSL triples so Tailwind can wrap
+ * them in hsl().  Semantic shadcn tokens are aliased onto the
+ * ArcadeVerse palette above so every existing component keeps
+ * working while the visual language changes underneath.
+ */
+@layer base {
+  :root {
+    /* ---- ArcadeVerse core tokens (light) ---- */
+    --background: 220 33% 98%;
+    --background-secondary: 220 30% 96%;
+
+    --surface: 0 0% 100%;
+    --surface-elevated: 220 30% 99%;
+    --surface-card: 220 30% 99%;
+    --surface-hover: 220 28% 95%;
+
+    --border: 220 22% 88%;
+    --border-strong: 220 20% 80%;
+    --border-active: 262 70% 62%;
+
+    --text-primary: 224 30% 13%;
+    --text-secondary: 222 16% 38%;
+    --text-muted: 220 12% 52%;
+
+    --accent-purple: 262 70% 58%;
+    --accent-purple-soft: 262 70% 96%;
+    --accent-yellow: 40 92% 50%;
+    --accent-blue: 213 88% 56%;
+    --accent-cyan: 190 80% 45%;
+    --accent-green: 152 58% 42%;
+    --accent-orange: 24 90% 55%;
+    --accent-pink: 330 76% 60%;
+
+    /* ---- shadcn semantic aliases ---- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-elevated);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent-purple);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--surface-hover);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--surface-hover);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--surface-hover);
+    --accent-foreground: var(--text-primary);
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --input: var(--border);
+    --ring: var(--accent-purple);
+    --radius: 0.75rem;
+
+    /* ---- charts ---- */
+    --chart-1: 262 70% 62%;
+    --chart-2: 213 88% 60%;
+    --chart-3: 152 58% 46%;
+    --chart-4: 40 92% 54%;
+    --chart-5: 330 76% 62%;
+
+    /* ---- sidebar ---- */
+    --sidebar-background: var(--background-secondary);
+    --sidebar-foreground: var(--text-primary);
+    --sidebar-primary: var(--accent-purple);
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: var(--surface-hover);
+    --sidebar-accent-foreground: var(--text-primary);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--accent-purple);
+
+    /* ---- fonts ---- */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-display: 'Sora', 'Inter', system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+
+    /* ---- scrollbar ---- */
+    --scrollbar-thumb: hsl(220 15% 78%);
+    --scrollbar-track: hsl(220 33% 98%);
+
+    /* ---- legacy Google brand hues (kept for compatibility) ---- */
+    --google-blue: 217 89% 61%;
+    --google-red: 5 81% 56%;
+    --google-yellow: 45 100% 51%;
+    --google-green: 130 55% 45%;
+    --google-light-blue: 198 93% 60%;
+  }
+
+  .dark {
+    /* ---- ArcadeVerse core tokens (dark, primary) ---- */
+    --background: 222 47% 5%;
+    --background-secondary: 222 44% 7%;
+
+    --surface: 223 40% 9%;
+    --surface-elevated: 223 36% 12%;
+    --surface-card: 223 34% 11%;
+    --surface-hover: 222 32% 16%;
+
+    --border: 220 25% 18%;
+    --border-strong: 220 24% 25%;
+    --border-active: 262 84% 70%;
+
+    --text-primary: 220 30% 97%;
+    --text-secondary: 218 22% 74%;
+    --text-muted: 219 16% 56%;
+
+    --accent-purple: 262 84% 70%;
+    --accent-purple-soft: 262 60% 20%;
+    --accent-yellow: 43 96% 62%;
+    --accent-blue: 213 94% 68%;
+    --accent-cyan: 189 90% 62%;
+    --accent-green: 152 62% 54%;
+    --accent-orange: 24 94% 64%;
+    --accent-pink: 330 86% 70%;
+
+    /* ---- shadcn semantic aliases ---- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-elevated);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent-purple);
+    --primary-foreground: 222 47% 5%;
+    --secondary: var(--surface-hover);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--surface);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--surface-hover);
+    --accent-foreground: var(--text-primary);
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --input: var(--border);
+    --ring: var(--accent-purple);
+
+    /* ---- charts ---- */
+    --chart-1: 262 84% 72%;
+    --chart-2: 213 94% 68%;
+    --chart-3: 152 62% 56%;
+    --chart-4: 43 96% 64%;
+    --chart-5: 330 86% 72%;
+
+    /* ---- sidebar ---- */
+    --sidebar-background: var(--background-secondary);
+    --sidebar-foreground: var(--text-primary);
+    --sidebar-primary: var(--accent-purple);
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: var(--surface-hover);
+    --sidebar-accent-foreground: var(--text-primary);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--accent-purple);
+
+    /* ---- scrollbar ---- */
+    --scrollbar-thumb: hsl(222 20% 28%);
+    --scrollbar-track: hsl(222 47% 5%);
+
+    /* ---- legacy Google brand hues ---- */
+    --google-blue: 217 94% 68%;
+    --google-red: 5 85% 65%;
+    --google-yellow: 43 96% 62%;
+    --google-green: 130 60% 58%;
+    --google-light-blue: 198 93% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: hsl(var(--accent-purple) / 0.28);
+    color: hsl(var(--text-primary));
+  }
+
+  /* Focus visibility for keyboard users */
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent-purple) / 0.8);
+    outline-offset: 2px;
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 999px;
+    border: 3px solid var(--scrollbar-track);
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--accent-purple) / 0.6);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Small uppercase eyebrow / section label */
+  .section-label {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground;
+  }
+
+  .section-label-index {
+    @apply text-accent-purple;
+  }
+
+  /* Gradient headline text */
+  .text-gradient {
+    background-image: linear-gradient(100deg, hsl(var(--accent-purple)), hsl(var(--accent-pink)) 55%, hsl(var(--accent-yellow)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-gradient-plain {
+    background-image: linear-gradient(100deg, hsl(var(--accent-purple)), hsl(var(--accent-blue)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-accent {
+    color: hsl(var(--accent-purple));
+  }
+
+  .text-highlight {
+    color: hsl(var(--accent-yellow));
+  }
+
+  /* Elevated translucent surface */
+  .glass {
+    background: hsl(var(--surface) / 0.7);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid hsl(var(--border) / 0.7);
+  }
+
+  .card-hover {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--border-active) / 0.45);
+    box-shadow: 0 24px 60px -32px hsl(var(--accent-purple) / 0.55);
+  }
+
+  /* Legacy compatibility aliases */
+  .google-card {
+    @apply border-border bg-card;
+  }
+  .google-gradient {
+    background-image: linear-gradient(100deg, hsl(var(--accent-purple)), hsl(var(--accent-blue)));
+  }
+  .dashboard-card {
+    @apply rounded-2xl border border-border bg-card;
+  }
+  .dashboard-card-hover {
+    @apply transition-colors hover:border-[hsl(var(--border-active)/0.5)] hover:bg-[hsl(var(--surface-hover))];
+  }
+  .progress-animate {
+    transition: width 1s ease-in-out;
+  }
+  .badge-glow {
+    box-shadow: 0 0 24px hsl(var(--accent-purple) / 0.35);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Subtle technical grid backdrop */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.35) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .bg-grid-fade {
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 20%, transparent 78%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 20%, transparent 78%);
+  }
+
+  /* Ambient aurora glow */
+  .bg-aurora {
+    background:
+      radial-gradient(60% 55% at 18% 8%, hsl(var(--accent-purple) / 0.22), transparent 60%),
+      radial-gradient(50% 50% at 85% 12%, hsl(var(--accent-blue) / 0.16), transparent 62%),
+      radial-gradient(45% 45% at 50% 100%, hsl(var(--accent-yellow) / 0.08), transparent 60%);
+  }
+
+  .shadow-glow-purple {
+    box-shadow: 0 24px 70px -30px hsl(var(--accent-purple) / 0.65);
+  }
+  .shadow-glow-yellow {
+    box-shadow: 0 24px 70px -34px hsl(var(--accent-yellow) / 0.55);
+  }
+  .shadow-surface {
+    box-shadow: 0 24px 60px -36px hsl(224 60% 2% / 0.9);
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, hsl(var(--surface)) 25%, hsl(var(--surface-hover)) 50%, hsl(var(--surface)) 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.8s infinite linear;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Diagonal hatched pattern for completed milestones & tiers */
+  .bg-striped-green {
+    background-color: hsl(152 62% 54% / 0.04);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      hsl(152 62% 54% / 0.08) 0px,
+      hsl(152 62% 54% / 0.08) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+  }
+
+  .bg-striped-blue {
+    background-color: hsl(213 94% 68% / 0.04);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      hsl(213 94% 68% / 0.08) 0px,
+      hsl(213 94% 68% / 0.08) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  border: 2px solid hsl(var(--border));
+  border-top-color: hsl(var(--accent-purple));
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+/* Prevent layout shift when Sheet/Dialog modals open */
+body:has([data-state="open"][role="dialog"]) {
+  overflow: hidden !important;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Suppress Crisp's native standalone floating bubble trigger so ONLY the branded ArcadeVerse launcher is visible */
+html body div.crisp-client [data-component="chat-bubble"] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}

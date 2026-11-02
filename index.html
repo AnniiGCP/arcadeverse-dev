@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Google Cloud Arcade Points Calculator & Progress Tracker | ArcadeVerse</title>
+    <meta name="description" content="ArcadeVerse is an independent Google Cloud Arcade points calculator and progress tracker. Calculate points from public profiles, track badges, monitor Facilitator milestones, and plan prize tier rewards." />
+    <meta name="author" content="ArcadeVerse Team" />
+    <link rel="canonical" href="https://arcadeverse.vercel.app/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#8b5cf6" />
+    
+    <meta name="application-name" content="ArcadeVerse" />
+    <meta name="apple-mobile-web-app-title" content="ArcadeVerse" />
+    <meta property="og:site_name" content="ArcadeVerse" />
+
+    <!-- Search Engine Verification -->
+    <meta name="google-site-verification" content="google8d67cc80ee4f843a.html" />
+    <meta name="msvalidate.01" content="2472533BAB95306784D54D55CD61A1F7" />
+
+    <script>
+      // Load AdSense asynchronously after window load so it does not block FCP/LCP
+      window.addEventListener('load', function() {
+        var adScript = document.createElement('script');
+        adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2634488321937643";
+        adScript.crossOrigin = "anonymous";
+        adScript.async = true;
+        document.head.appendChild(adScript);
+      }, { once: true });
+    </script>
+
+    <meta property="og:title" content="Google Cloud Arcade Points Calculator & Progress Tracker | ArcadeVerse" />
+    <meta property="og:description" content="ArcadeVerse is an independent Google Cloud Arcade points calculator and progress tracker. Calculate points from public profiles, track badges, monitor Facilitator milestones, and plan prize tier rewards." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arcadeverse.vercel.app/" />
+    <meta property="og:image" content="https://arcadeverse.vercel.app/images/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Google Cloud Arcade Points Calculator & Progress Tracker | ArcadeVerse" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ArcadeVerse" />
+    <meta name="twitter:title" content="Google Cloud Arcade Points Calculator & Progress Tracker | ArcadeVerse" />
+    <meta name="twitter:description" content="ArcadeVerse is an independent Google Cloud Arcade points calculator and progress tracker. Calculate points from public profiles, track badges, monitor Facilitator milestones, and plan prize tier rewards." />
+    <meta name="twitter:image" content="https://arcadeverse.vercel.app/images/og-preview.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" />
+    <link rel="dns-prefetch" href="https://client.crisp.chat" />
+
+    <!-- Crisp Live Chat Configuration -->
+    <style id="crisp-custom-launcher-sync">
+      /* Hide Crisp's native standalone floating bubble trigger so ONLY the branded ArcadeVerse launcher is visible */
+      .crisp-client [data-component="chat-bubble"] {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+      }
+    </style>
+    <script>
+      window.$crisp = window.$crisp || [];
+      window.CRISP_WEBSITE_ID = "16066bde-e20b-4db0-babd-da130126908b";
+      window.$crisp.push(["safe", true]);
+      window.$crisp.push(["do", "chat:hide"]);
+    </script>
+
+    <script>
+      (function() {
+        const prefetchStats = function() {
+          fetch('/api/stats', { 
+            method: 'GET',
+            cache: 'no-cache',
+            priority: 'low'
+          })
+          .then(res => res.json())
+          .then(data => {
+            sessionStorage.setItem('statsCache', JSON.stringify(data));
+          })
+          .catch(() => {});
+        };
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(prefetchStats, { timeout: 3000 });
+        } else {
+          window.addEventListener('load', prefetchStats, { once: true });
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://arcadeverse.vercel.app/#app",
+        "name": "ArcadeVerse",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web Browser",
+        "url": "https://arcadeverse.vercel.app/",
+        "description": "Google Cloud Arcade points calculator and progress tracker for analyzing badges, milestones, and leaderboard stats.",
+        "author": {
+          "@id": "https://arcadeverse.vercel.app/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://arcadeverse.vercel.app/#organization",
+        "name": "ArcadeVerse",
+        "alternateName": ["Arcade Verse"],
+        "url": "https://arcadeverse.vercel.app/",
+        "logo": "https://arcadeverse.vercel.app/images/arcadeverse-logo.png",
+        "sameAs": [
+          "https://github.com/arcadeverse",
+          "https://t.me/ArcadeVerse",
+          "https://chat.whatsapp.com/LVC3Jdrx3VYB5JIKYCUpZo?s=sw&p=i&mlu=4&ilr=4"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://arcadeverse.vercel.app/#website",
+        "name": "ArcadeVerse",
+        "alternateName": ["Arcade Verse"],
+        "url": "https://arcadeverse.vercel.app/",
+        "description": "Google Cloud Arcade points calculator and progress tracker for analyzing badges, milestones, and leaderboard stats.",
+        "publisher": {
+          "@id": "https://arcadeverse.vercel.app/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://arcadeverse.vercel.app/resources?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <style>
+      :root {
+        --font-geist-sans: 'Inter', system-ui, sans-serif;
+        --font-geist-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+    </style>
+
+    <!-- Microsoft Clarity (Deferred to idle) -->
+    <script type="text/javascript">
+      (function() {
+        function initClarity() {
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "yni5iljtry");
+        }
+        if (window.requestIdleCallback) {
+          requestIdleCallback(initClarity, { timeout: 2500 });
+        } else {
+          window.addEventListener('load', initClarity, { once: true });
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <div id="root">
+      <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;">Google Cloud Arcade Points Calculator | ArcadeVerse</h1>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

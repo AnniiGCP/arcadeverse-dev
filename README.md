@@ -1,6 +1,6 @@
 <div align="center">
 
-# ArcadeVerse — Public Architectural Showcase
+# ArcadeVerse — Public Frontend Architectural Showcase
 
 [![Live Deployment](https://img.shields.io/badge/Live%20Application-arcadeverse.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://arcadeverse.vercel.app)
 [![React](https://img.shields.io/badge/React-18%2B-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
@@ -23,9 +23,8 @@
 Participants earn digital badges across various tracks (Game Badges, Trivia Badges, Skill Badges, and Special Events). While Google Cloud Skills Boost public profiles list completions chronologically, they lack automated scoring calculations, cohort-specific date boundary validation, skill badge pair-matching, and milestone projection.
 
 ### Verified Production Metrics
-- **3,700+** Unique Community Visitors
-- **3,300+** Public Profiles Ingested & Analyzed
-- **1,500+** Community Ratings (Average: 4.2 / 5.0)
+- **5,486+** Unique Community Visitors Tracked
+- **4,987+** Public Profiles Analyzed & Processed
 - **100% Client Availability** via serverless edge routing
 
 ---
@@ -112,27 +111,26 @@ The application renders a visual progress bar indicating distance to each milest
 ## 6. Security & Confidentiality Notice
 
 > [!IMPORTANT]
-> **Proprietary Business Logic & Ingestion Safeguards**  
-> ArcadeVerse is an independent proprietary product. The underlying production repository remains private to safeguard custom scraping routines, internal scoring weights, and infrastructure credentials. This showcase repository provides verified architectural specifications, performance benchmarks, and user workflow demonstrations without exposing confidential backend source code.
+> **Showcase Scope & Proprietary Safeguards**  
+> This repository contains the public frontend presentation architecture, UI components, and mock client interfaces. The production scraping logic, parsing regexes, internal scoring multipliers, and database infrastructure remain securely private in the original production repository.
 
 ---
 
 ## 7. Tech Stack Overview
 
 - **Frontend:** React 18, TypeScript, Tailwind CSS, Lucide Icons, Framer Motion
-- **Backend / Serverless:** Node.js, Express, Vercel Serverless Functions
-- **Ingestion & Parsing:** Axios, Cheerio, Regex Data Normalizers
-- **Database & Storage:** MongoDB (Analytics & Community Aggregates), Client LocalStorage
-- **Deployment & CI/CD:** Vercel Edge Network, GitHub
+- **Tooling:** Vite, Biome, PostCSS
+- **Storage:** Client LocalStorage
+- **Live Production:** Vercel Edge Network (`https://arcadeverse.vercel.app`)
 
 ---
 
 ## 8. Author & Engineering Contact
 
 **Aniket Yadav**  
-*Computer Science & Design Engineer | Bengaluru, Karnataka, India*
+*Cloud & DevOps Engineer | Software Engineer*  
+*Bengaluru, Karnataka, India 📍*
 
-- **GitHub:** [@AnniiGCP](https://github.com/AnniiGCP)
 - **LinkedIn:** [linkedin.com/in/aniketyadav9099](https://linkedin.com/in/aniketyadav9099/)
 - **Email:** [aniketyadav0078@gmail.com](mailto:aniketyadav0078@gmail.com)
 - **Live Platform:** [https://arcadeverse.vercel.app](https://arcadeverse.vercel.app)
