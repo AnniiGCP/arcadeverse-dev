@@ -16,6 +16,12 @@
 
 ---
 
+<div align="center">
+  <img src="./assets/readme-preview.png" alt="ArcadeVerse Dev — Frontend Architecture Showcase" width="100%" />
+</div>
+
+---
+
 ## 1. Executive Summary & Impact
 
 **ArcadeVerse** was engineered to solve an active pain point for thousands of cloud enthusiasts and student facilitators in the **Google Cloud Arcade** and **Google Cloud Arcade Facilitator Program**. 
